@@ -11,8 +11,14 @@ $(function($){
 		initialize: function(){
 			this.$input = $('#query');
 
+			new app.FavListView({
+				collection: app.FavoriteCollection
+			});
+
 			this.listenTo(app.MovieCollection, 'reset', this.addAllToSearch);
 			this.listenTo(app.MovieCollection, 'change:favorite', this.addOneToFavorite);
+
+			app.FavoriteCollection.fetch({ reset:true });
 		},
 
 		addOneToFavorite: function(movie) {

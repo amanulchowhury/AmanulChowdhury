@@ -1,7 +1,8 @@
 var app = app || {};
 
 $(function($){
-	var FavListView = Backbone.View.extend({
+	//var FavListView
+	app.FavListView = Backbone.View.extend({
 		el: '#favlist',
 
 		events: {
@@ -11,16 +12,12 @@ $(function($){
 		initialize: function(){
 			this.listenTo(this.collection, 'add', this.addOne);
 			this.listenTo(this.collection, 'reset', this.addAll);
-			// this.listenTo(this.collection, 'change:ordinal', this.addAll);
-			//this.listenTo(this.collection, 'remove', this.addAll);
 
 			this.$el.sortable({
 		        stop: function(event, ui) {
 		            ui.item.trigger('drop', ui.item.index());
 		        }
     		});
-
-			app.FavoriteCollection.fetch({ reset:true });
 		},
 
 		addAll: function(){
@@ -50,8 +47,4 @@ $(function($){
 	        this.addAll();
 		}
 	})
-
-	app.FavListView = new FavListView({
-		collection: app.FavoriteCollection
-	});
 });

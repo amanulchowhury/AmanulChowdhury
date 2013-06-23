@@ -8,9 +8,6 @@ var app = app || {};
         url: 'http://search.guide.getglue.com/objects',
          
         parse: function(response){
-            // _.each(response, function(movie, index){
-            //     movie.favorite = false; 
-            // });
             
             return response;
         }
