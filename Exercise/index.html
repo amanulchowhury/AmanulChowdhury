@@ -1,0 +1,67 @@
+<html !doctype>
+	<head>
+		<link href="assets/StyleSheet.css" rel="stylesheet" type="text/css">
+        <link href="assets/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+        <h1>Movie Collection Gallery</h1>
+        <section id="app">
+            <form id="searchform">
+                <input type="text" id="query"/>
+                <button id="search">Search</button>
+            </form>
+            <div class="list-container">
+                <header>
+                    <h2>Search Result</h2>
+                </header>
+                <div class="result-container">
+                    <section class="container">
+                        <ul id="searchlist" class="list">
+                
+                        </ul>
+                    </section>
+                </div>
+            </div>
+            <div class="list-container">
+                <header>
+                    <h2>Favorites Gallery</h2>
+                </header>
+                <div class="result-container">
+                    <section class="container">
+                        <ul id="favlist" class="list">
+                
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </section>
+	</body>
+</html>
+<script id="item-view" type="text/x-handlebars-template">
+    <div>
+        <img src="{{images.thumbnail}}" alt="image" />
+    </div>
+    <div class="movie-info">
+        <label><h3>Title: {{title}}</h3></label>
+        {{#if favorite}}
+            <button class="destroy">Delete</button>
+            {{else}}
+                <button class="add-movie">Add to Gallery</button>
+        {{/if}}
+    </div>
+</script>
+<script src="js/lib/jQuery.js"></script>
+<script src="js/lib/underscore.js"></script>
+<script src="js/lib/Backbone.js"></script>
+<script src="js/lib/backbone.localStorage.js"></script>
+<script src="js/lib/handlebars.js"></script>
+<script src="js/lib/jquery-ui.min.js"></script>
+<script src="js/app/models/movie.js"></script>
+<script src="js/app/models/favorite.js"></script>
+<script src="js/app/collections/movie.js"></script>
+<script src="js/app/collections/favorite.js"></script>
+<script src="js/app/views/movieList.js"></script>
+<script src="js/app/views/favorite.js"></script>
+<script src="js/app/views/favoriteList.js"></script>
+<script src="js/app/views/app.js"></script>
+<script src="js/app/app.js"></script>

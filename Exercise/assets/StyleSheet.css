@@ -1,0 +1,77 @@
+body {
+}
+
+.list-container {
+    width: 42%;
+    float: left;
+    margin: 20px;
+    padding: 5px;
+}
+
+.result-container{
+    height: 620px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+}
+
+.container{
+    position: relative;
+    z-index: 2;
+}
+
+.list {
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+}
+
+.item-view {
+    position: relative;
+    width: 96%;
+    border: 1px solid #CCC;
+    margin: 5px;
+    padding: 5px;
+    float: left;
+}
+
+.item-view label {
+    float: left;
+    display: inline-block;
+    width: 100%;
+}
+
+.item-view div {
+    position: relative;
+    float: left;
+    padding: 0px;
+    margin: 10px;
+}
+
+.movie-info{
+    width: 60%;
+}
+
+.destroy, .add-movie {
+    font-size: 20px;
+}
+
+.list h3{
+    word-break: break-word;
+}
+
+::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+    background: rgba(163, 155, 155, 0.8);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+}
