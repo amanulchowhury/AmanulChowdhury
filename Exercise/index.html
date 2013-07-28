@@ -22,7 +22,7 @@
                     </section>
                 </div>
             </div>
-            <div class="list-container">
+            <div class="list-container favorite-container">
                 <header>
                     <h2>Favorites Gallery</h2>
                 </header>
@@ -47,6 +47,11 @@
             <button class="destroy">Delete</button>
             {{else}}
                 <button class="add-movie">Add to Gallery</button>
+        {{/if}}
+    </div>
+    <div class="shuffle">
+        {{#if favorite}}
+            <span></span>
         {{/if}}
     </div>
 </script>

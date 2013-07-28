@@ -24,7 +24,6 @@ $(function($){
 		},
 
 		drop: function(event, index){
-			debugger;
 			this.$el.trigger('update-sort', [this.model, index]);
 		},
 
