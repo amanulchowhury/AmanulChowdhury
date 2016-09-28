@@ -20,7 +20,7 @@ $(function($){
 		render: function(){
 			this.$el.html(this.template(this.model.toJSON()));
 
-            return this;
+            		return this;
 		},
 
 		drop: function(event, index){
